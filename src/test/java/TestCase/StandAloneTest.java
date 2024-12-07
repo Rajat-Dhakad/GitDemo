@@ -47,6 +47,8 @@ public class StandAloneTest {
         Boolean match = cartProducts.stream().anyMatch(cartProduct-> cartProduct.getText().equalsIgnoreCase(productname));
         Assert.assertTrue(match);
 
+
+        driver.findElement(By.cssSelector(".totalRow button")).click();
         driver.findElement(By.cssSelector(".totalRow button")).click();
 
         Actions a = new Actions(driver);
